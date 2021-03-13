@@ -10,3 +10,4 @@
 #### Ability for the analyser to load the Indian States Code Information from a CSV
 ##### 2.1 Given the State Code CSV file, Check to ensure the Number of Record matches
 ##### 2.2 Given the State Code CSV File if incorrect Returns a custom Exception
+##### 2.3 Given the State Code CSV File when correct but type incorrect Returns a custom Exception
