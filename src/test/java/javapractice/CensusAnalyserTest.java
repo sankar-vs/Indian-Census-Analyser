@@ -70,4 +70,15 @@ public class CensusAnalyserTest {
             Assertions.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM,e.type);
         }
     }
+
+    @Test
+    public void givenIndiaStateCSV_ShouldReturnExactCount()  {
+        try {
+            IndianCensusAnalyser censusAnalyser = new IndianCensusAnalyser();
+            int numOfRecords = censusAnalyser.loadIndianStateCode(INDIA_STATE_CSV_FILE_PATH);
+            Assertions.assertEquals(37,numOfRecords);
+        } catch (CensusAnalyserException e) {
+            System.out.println(e.toString());
+        }
+    }
 }
